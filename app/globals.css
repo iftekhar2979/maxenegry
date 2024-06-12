@@ -18,16 +18,222 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.hoverShow {
+
+  background-color: #E5F1EB;
+  padding: 0em 1em;
+  border-radius: 2em;
+
+}
+
+.buttonHover {
+  background: #1D1D1B;
+  padding: 0.2em 1em;
+  color: white;
+  border-radius: 1em;
+  position: absolute;
+  left: 2.24em;
+  font-size: 1.5em;
+  width: 10em;
+  top: 16em;
+}
+
+.heading {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.firstHover {
+  position: absolute;
+  left: 8em;
+  font-size: 1.5em;
+  padding: 0em 0.5em;
+  top: -1em;
+  background-color: hsla(0, 0%, 95%, .85);
+  border-radius: 1em;
+  width: 11em;
+  transform: rotate(19deg);
+  /* Initial rotation state */
+  display: flex;
+  align-items: center;
+  height: 2.5em;
+  transition: transform 0.3s ease-in;
+  transition-duration: 0.15s;
+  animation: rotateAnimation 0.15s ease-in forwards;
+}
+
+.firstHover.active {
+  display: block;
+  animation: rotateAnimation 0.3s ease-in forwards;
+  /* Apply the animation */
+}
+
+.firstWithoutHover {
+  display: none;
+}
+
+.secondWithoutHover {
+  display: none;
+}
+
+.thirdWithoutHover {
+  display: none;
+}
+
+.mainHeadingWithoutHover {
+  font-size: 2.5em;
+  margin-top: 5em;
+  font-weight: 500;
+}
+
+.buttonWithoutHover {
+  display: none;
+}
+
+.iconWithoutHover {
+  position: relative;
+  width: 5em;
+}
+
+.secondHover {
+  position: relative;
+  left: 6em;
+  font-size: 1.5em;
+  padding: 0em 0.5em;
+  top: 4.5em;
+  background-color: hsla(0, 0%, 95%, .85);
+  border-radius: 1em;
+  width: 11em;
+  display: flex;
+  align-items: center;
+  height: 2.5em;
+  transition: transform ease-in 0.3s;
+  transform: rotate(-9deg);
+  z-index: 10;
+  transition-duration: 0.15s;
+  animation: secondRotateAnimation 0.2s ease forwards;
+}
+
+.thirdHover {
+
+  position: absolute;
+  background-color: hsla(0, 0%, 95%, .85);
+  left: 6em;
+  top: 12.9em;
+  border-radius: 1em;
+  padding: 0em 0.5em;
+  width: 11em;
+  display: flex;
+  align-items: center;
+  height: 2.5em;
+  font-size: 1.5em;
+  transition: transform ease-in-out 0.3s;
+  transform: rotate(12deg);
+  z-index: 10;
+  transition-duration: 0.15s;
+  animation: thirdRotateAnimation 0.2s ease-in forwards;
+
+}
+
+.mainHeadingHover {
+  position: absolute;
+  top: 4.2em;
+  font-weight: 400;
+  font-size: 2.5em;
+}
+
+.iconHover {
+  position: absolute;
+  width: 4em;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  /* Add gap between grid items, adjust as needed */
+  margin: 5rem auto;
+  /* Center the grid container horizontally and add top/bottom margin */
+  max-width: 1200px;
+  /* Set a maximum width for the grid container, adjust as needed */
+  width: 100%;
+  /* Ensure the container doesn't exceed its max-width */
+  padding: 0 1rem;
+  /* Optional: Add padding to the container */
+}
+
+.buttonHover:hover {
+  -webkit-animation: pulse-animation 2s infinite;
+  animation: pulse-animation 2s infinite;
+
+}
+
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(30deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate(15deg);
+    opacity: 1;
+  }
+}
+
+@keyframes buttonAnimate {
+  from {
+    box-shadow: #1D1D1B 0 10 20;
+  }
+
+  to {
+    box-shadow: none
+  }
+}
+
+@keyframes secondRotateAnimation {
+  from {
+    transform: rotate(5deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate(-19deg);
+    opacity: 1;
+  }
+}
+
+@keyframes thirdRotateAnimation {
+  from {
+    transform: rotate(28deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate(7deg);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-animation {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(29, 29, 27, .2);
+    box-shadow: 0 0 0 0 rgba(29, 29, 27, .2);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 20px transparent;
+    box-shadow: 0 0 0 20px transparent;
   }
 }
