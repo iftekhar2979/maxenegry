@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <main className="mainGrid">
     {
-      elements?.map(item=><Card object={item}/>)
+      elements?.map((item,index)=><Card key={index} object={item}/>)
     }
     </main>
   );
