@@ -204,16 +204,30 @@ display: none;
   }
   .buttonOnSmall {
     background: #1D1D1B;
-    padding: 0.2em 1em;
+    padding: inherit;
     color: white;
     border-radius: 1em;
     position: relative;
     left: 2em;
     font-size: 1.5em;
     width: 10em;
-    top: 4em;
+    top: 2em;
+}
+.buttonOnSmall[data-type="first"] {
+  top: 3em;
 }
 
+.buttonOnSmall[data-type="second"] {
+  top: 4em;
+}
+
+.buttonOnSmall[data-type="third"] {
+  top: 2em;
+}
+
+.buttonOnSmall[data-type="fourth"] {
+  top: 2em;
+}
   .buttonOnSmall:hover {
     -webkit-animation: pulse-animation 2s infinite;
     animation: pulse-animation 2s infinite;

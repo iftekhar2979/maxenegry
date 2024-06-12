@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from 'react';
 
 const Card = ({object}) => {
-    let { firstElement, secondElement, thirdElement, iconLink, mainHeadingElement, buttonElement, backgroundImage, paddingTop } = object;
+    let { firstElement, secondElement, thirdElement,dataType, iconLink, mainHeadingElement, buttonElement, backgroundImage, paddingTop } = object;
     const [hover, setHover] = useState(false);
     const [isLargeScreen, setIsLargeScreen] = useState(false);
+    const [isMiddiumScreen,setMiddiumScreen]=useState(false)
   
     useEffect(() => {
       const handleResize = () => {
@@ -60,7 +61,7 @@ const Card = ({object}) => {
   let largePadding={ paddingTop,margin:"0 auto"}
   let smallPadding={margin:"0 auto"}
   return (
-    <div style={!isLargeScreen?largePadding:smallPadding}>
+    <div style={!isLargeScreen?largePadding:smallPadding} datatype={dataType}>
     <div
       style={hover ? { ...styles.card, ...styles.cardHover } : styles.card}
       onMouseEnter={handleMouseEnter}
