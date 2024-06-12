@@ -57,17 +57,17 @@ body {
 .firstHover {
   position: absolute;
   left: 8em;
-  font-size: 1.5em;
-  padding: 0em 0.5em;
-  top: -1em;
+  font-size: 1.25em;
+  padding: 0.4em;
+  top: -2em;
   background-color: hsla(0, 0%, 95%, .85);
   border-radius: 1em;
-  width: 11em;
   transform: rotate(19deg);
-  /* Initial rotation state */
+  font-weight: 600;
   display: flex;
   align-items: center;
-  height: 2.5em;
+  text-align: center;
+  width: 14em;
   transition: transform 0.3s ease-in;
   transition-duration: 0.15s;
   animation: rotateAnimation 0.15s ease-in forwards;
@@ -111,14 +111,16 @@ display: none;
 .secondHover {
   position: relative;
   left: 6em;
-  font-size: 1.5em;
-  padding: 0em 0.5em;
-  top: 4.5em;
+  font-size: 1.25em;
+  padding: 2em;
+  top: 5.5em;
   background-color: hsla(0, 0%, 95%, .85);
   border-radius: 1em;
-  width: 11em;
+  text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-weight: 600;
   height: 2.5em;
   transition: transform ease-in 0.3s;
   transform: rotate(-9deg);
@@ -128,24 +130,23 @@ display: none;
 }
 
 .thirdHover {
-
   position: absolute;
   background-color: hsla(0, 0%, 95%, .85);
-  left: 6em;
-  top: 12.9em;
+  left: 11em;
+  top: 16.9em;
   border-radius: 1em;
-  padding: 0em 0.5em;
-  width: 11em;
+  padding: 0.5em;
   display: flex;
   align-items: center;
   height: 2.5em;
-  font-size: 1.5em;
+  font-size: 1.2em;
   transition: transform ease-in-out 0.3s;
   transform: rotate(12deg);
   z-index: 10;
+  font-weight: 600;
   transition-duration: 0.15s;
   animation: thirdRotateAnimation 0.2s ease-in forwards;
-
+  width: 10em;
 }
 .buttonOnLarge{
   display: none;
@@ -153,9 +154,9 @@ display: none;
 
 .mainHeadingHover {
   position: absolute;
-  top: 4.2em;
-  font-weight: 400;
-  font-size: 2.5em;
+  top: 5.2em;
+  font-weight: 500;
+  font-size: 2.2em;
 }
 
 .iconHover {
@@ -234,7 +235,7 @@ display: none;
   .mainGrid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
+    gap: 1em;
     /* Add gap between grid items, adjust as needed */
     margin: 5rem auto;
     /* Center the grid container horizontally and add top/bottom margin */
@@ -264,7 +265,7 @@ display: none;
     left: 2em;
     font-size: 1.5em;
     width: 10em;
-    top: 4em;
+    top: 2em;
 }
 
   .buttonOnSmall:hover {
@@ -282,6 +283,7 @@ display: none;
     font-weight: 500;
     margin-left: 2em;
   }
+
 }
 
 

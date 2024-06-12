@@ -57,9 +57,10 @@ const Card = ({object}) => {
         setHover(false);
       }
     };
-  
+  let largePadding={ paddingTop,margin:"0 auto"}
+  let smallPadding={margin:"0 auto"}
   return (
-    <div style={{paddingTop,margin:"0 auto"}}>
+    <div style={!isLargeScreen?largePadding:smallPadding}>
     <div
       style={hover ? { ...styles.card, ...styles.cardHover } : styles.card}
       onMouseEnter={handleMouseEnter}
